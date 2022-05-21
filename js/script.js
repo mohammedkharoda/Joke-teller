@@ -1,6 +1,7 @@
+import { VoiceRSS } from "../js/voiceRSS";
 const button = document.getElementById("button");
 const audioElement = document.getElementById("audio");
-import voiceRSS from "./voiceRSS";
+
 // Disable/Enable Button
 function toggleButton() {
   button.disabled = !button.disabled;
@@ -10,7 +11,7 @@ function toggleButton() {
 function tellMe(joke) {
   const jokeString = joke.trim().replace(/ /g, "%20");
   // VoiceRSS Speech Parameters
-  voiceRSS.speech({
+  VoiceRSS.speech({
     key: "93d20da9af8940d4996fa1fc7cba40a3",
     src: jokeString,
     hl: "en-us",

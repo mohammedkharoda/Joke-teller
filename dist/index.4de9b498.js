@@ -526,9 +526,7 @@ function hmrAcceptRun(bundle, id) {
 }
 
 },{}],"4pp4s":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-var _voiceRSS = require("./voiceRSS");
-var _voiceRSSDefault = parcelHelpers.interopDefault(_voiceRSS);
+var _voiceRSS = require("../js/voiceRSS");
 const button = document.getElementById("button");
 const audioElement = document.getElementById("audio");
 // Disable/Enable Button
@@ -539,7 +537,7 @@ function toggleButton() {
 function tellMe(joke) {
     const jokeString = joke.trim().replace(/ /g, "%20");
     // VoiceRSS Speech Parameters
-    _voiceRSSDefault.default.speech({
+    _voiceRSS.VoiceRSS.speech({
         key: "93d20da9af8940d4996fa1fc7cba40a3",
         src: jokeString,
         hl: "en-us",
@@ -568,12 +566,13 @@ async function getJokes() {
 button.addEventListener("click", getJokes);
 audioElement.addEventListener("ended", toggleButton);
 
-},{"./voiceRSS":"6UcWm","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6UcWm":[function(require,module,exports) {
+},{"../js/voiceRSS":"6UcWm"}],"6UcWm":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "VoiceRSS", ()=>VoiceRSS
+);
 const audioElement = document.getElementById("audio");
-// VoiceRSS Javascript SDK
-exports.default = VoiceRSS = {
+const VoiceRSS = {
     speech (e) {
         this._validate(e), this._request(e);
     },

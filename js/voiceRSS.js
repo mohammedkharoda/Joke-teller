@@ -1,6 +1,6 @@
 const audioElement = document.getElementById("audio");
 // VoiceRSS Javascript SDK
-export default VoiceRSS = {
+export default voiceRSS = {
   speech(e) {
     this._validate(e), this._request(e);
   },

@@ -1,0 +1,14 @@
+{
+  "name": "joke-teller",
+  "version": "1.0.0",
+  "description": "It tells Jokes",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "author": "Mohammed Kharoda",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.5.0"
+  }
+}

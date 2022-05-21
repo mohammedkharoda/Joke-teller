@@ -6,7 +6,7 @@ html {
 
 body {
   margin: 0;
-  background: #fefecb;
+  background: #394452;
 }
 
 .container {
@@ -18,7 +18,7 @@ body {
   align-items: center;
   background: url("./robot.gif");
   background-size: contain;
-  background-position: left center;
+  background-position: center center;
   background-repeat: no-repeat;
 }
 
@@ -34,6 +34,8 @@ button {
   border: none;
   border-radius: 5px;
   box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  top: 30%;
 }
 
 button:hover {
@@ -58,5 +60,7 @@ button:disabled {
 
   button {
     box-shadow: 5p 5px 30px 20px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 81%;
   }
 }
